@@ -1,0 +1,143 @@
+/* src/PortfolioSlideshow.css */
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .arrow {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    width: auto;
+    padding: 16px 10%;
+    margin-top: -22px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+  }
+  
+  .left-arrow {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .right-arrow {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .arrow:hover {
+    opacity: .5;
+  }
+  
+  .slides {
+    position: relative;
+    height: 100%;
+  }
+  
+  .slide {
+    display: none;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .slide.inactive {
+    opacity: 0;
+  }
+  
+  .slide-content {
+    padding: 20px;
+    color: #f5f5f5;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .project-name {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card {
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    padding: 15px;
+    width: 30%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+    color: #00d1b2;
+    margin-bottom: 10px;
+  }
+  
+  .feature-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .feature-points {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #ccc;
+  }
+  
+  .live-demo {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #00d1b2;
+    color: #1e1e1e !important;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .live-demo:hover {
+    background-color: #00b89c;
+  }
+  
+  @media (max-width: 768px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature-card {
+      width: 80%;
+    }
+  }
+  

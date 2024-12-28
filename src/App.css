@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+body {
+  background: black;
+  overflow-x: hidden;
+}
+p {
+  font-family: 'Ubuntu';
+}
+
+h1 {
+  font-family: 'IBM Plex Serif';
+  text-transform: capitalize;
+  color: #FFFFFF;
+  text-shadow:
+    1px 1px 2px pink,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  font-weight: normal;
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  font-family: "Orbitron";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  z-index: 1000; /* Ensure it stays above the canvas */
+  /*box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for aesthetics */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar button {
+  background: transparent;
+  color: white;
+  font-family: 'orbitron';
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.navbar button:hover {
+  border-bottom: 2px solid #00ccff; /* Highlight color on hover */
+  cursor: pointer;
+}
+.navbar a {
+  
+  color: white;
+  font-family: 'orbitron';
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid #00ccff; /* Highlight color on hover */
+}
+
+.special {
+  text-decoration: none;
+  background: rgb(31,179,198) !important;
+  background: -moz-linear-gradient(90deg, rgba(31,179,198,1) 0%, rgba(196,27,182,1) 100%) !important;
+  background: -webkit-linear-gradient(90deg, rgba(31,179,198,1) 0%, rgba(196,27,182,1) 100%) !important;
+  background: linear-gradient(90deg, rgba(31,179,198,1) 0%, rgba(196,27,182,1) 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1fb3c6",endColorstr="#c41bb6",GradientType=1) !important;
+  border-radius: 20px !important;
+  color: white;
+  padding: 8px 25px !important;
+  border: 0px solid transparent !important;
+  font-family: 'Orbitron';
+}
+
+.special:hover {
+  border-bottom: 0px solid black !important;
+  opacity: .8;
+  cursor: pointer;
+}
+
+.divider {
+  height: 4px;
+  border-radius: 2px;
+  background: rgb(4,255,234);
+  background: -moz-radial-gradient(circle, rgba(4,255,234,1) 0%, rgba(131,0,255,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(4,255,234,1) 0%, rgba(131,0,255,1) 100%);
+  background: radial-gradient(circle, rgba(4,255,234,1) 0%, rgba(131,0,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#04ffea",endColorstr="#8300ff",GradientType=1);
+}
+.featurebox {
+  background: #222;
+  box-shadow: 1px 1px 5px rgb(58, 58, 96);
+  margin: 10px 0px;
+  padding: 20px 30px;
+  border-radius: 2px;
+  font-family: 'Ubuntu';
+  border: 1px solid #333;
+  font-size: 12px;
+}
+
+.glow {
+  color: rgb(255, 108, 240);
+  text-shadow: 0px 0px 5px rgb(255, 65, 246);
+  font-weight: bold;
+}
+.aboutcard {
+  width: 300px;
+  background: rgba(0,0,0,.5);
+  box-shadow: 1px 1px 5px rgb(58, 58, 96);
+  margin: 10px 0px;
+  padding: 20px 30px;
+  border-radius: 2px;
+  border: 1px solid #333;
+  color: white;
+  
+}
+.circleicon {
+  border-radius: 50%;
+  margin: 20px 7px;
+  padding: 10px 11px;
+}
+.centerize {
+  width: 100%;
+  text-align:center;
+}
+.centerize a {
+  color: white;
+}
+.pink {
+  box-shadow: 0px 0px 20px rgb(255, 84, 112);
+  background: pink;
+  border: 1px solid rgb(255, 127, 148);
+}
+.purple {
+  box-shadow: 0px 0px 20px rgb(201, 84, 255);
+  background: rgb(171, 106, 255);
+  border: 1px solid rgb(144, 59, 255);
+
+}
+.blue {
+  box-shadow: 0px 0px 20px rgb(84, 158, 255);
+  background: rgb(109, 136, 255);
+  border: 1px solid rgb(34, 89, 255);
+}
+.pfp {
+  height: 100px;
+  width: 100px;
+  background: rgba(0,0,0,.5);
+  box-shadow: 1px 1px 5px rgb(58, 58, 96);
+  padding: 20px;
+  margin: 20px 0px 0px 0px;
+  border-radius: 100px;
+  border: 1px solid #333;
+  color: white;
+}
+h3 {
+  font-family: "Orbitron";
+}
+
+/* Container for the progress bar */
+.progress-bar {
+  margin: 20px 0px;
+  width: 150px;
+  height: 20px;
+  background-color: #e0e0e0; /* Light grey background */
+  border-radius: 10px;
+  overflow: hidden; /* Ensures the progress doesn't overflow the container */
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2) inset,
+    0 0px 15px rgba(255, 255, 255, 0.95);
+}
+
+/* Inner progress bar */
+.progress {
+  height: 100%;
+  background: rgb(124,30,219);
+  background: -moz-linear-gradient(90deg, rgba(124,30,219,1) 0%, rgba(234,132,255,1) 22%, rgba(242,179,255,1) 36%, rgba(255,255,255,1) 50%, rgba(112,228,226,1) 65%, rgba(97,225,223,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(124,30,219,1) 0%, rgba(234,132,255,1) 22%, rgba(242,179,255,1) 36%, rgba(255,255,255,1) 50%, rgba(112,228,226,1) 65%, rgba(97,225,223,1) 100%);
+  background: linear-gradient(90deg, rgba(124,30,219,1) 0%, rgba(234,132,255,1) 22%, rgba(242,179,255,1) 36%, rgba(255,255,255,1) 50%, rgba(112,228,226,1) 65%, rgba(97,225,223,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7c1edb",endColorstr="#61e1df",GradientType=1);
+  /*width: 50%; /* Adjust this value to change fullness */
+  border-radius: 10px; /* Round corners only on the left */
+  transition: width 0.3s ease-in-out; /* Smooth transition for fullness changes */
+  box-shadow: 0px 0px 5px rgba(0, 42, 255, 0.692) inset;
+}
+
+.progress50 {
+  width: 50%;
+}
+.progress60 {
+  width: 60%;
+}
+.progress70 {
+  width: 70%;
+}
+.progress75 {
+  width: 75%;
+}
+.progress80 {
+  width: 80%;
+}
+.progress85 {
+  width: 85%;
+}
+.progress90 {
+  width: 90%;
+}
+.progress95 {
+  width: 95%;
+}
+
+.progress50:hover, .progress60:hover, .progress70:hover, .progress75:hover, .progress80:hover, .progress85:hover, .progress90:hover, .progress95:hover {
+  width: 100%;
+  cursor: pointer;
+}
+
+.bubble {
+  height: 100px;
+  text-align: center;
+  margin: 0px 10px;
+  transform: translate(0,0);
+  transition: ease .6s;
+}
+.bubble:hover {
+  transform: translate(0,-10px);
+  transition: ease .6s;
+  cursor: pointer;
+}
+h4 {
+  font-family: 'Orbitron';
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+.bubbleicon {
+  height: 80px;
+  width: 80px;
+  background: rgba(0,0,0,.5);
+  box-shadow: 1px 1px 5px rgb(58, 58, 96);
+  border-radius: 100px;
+  color: white;
+  padding: 0;
+  margin: 0;
+  background: 
+              linear-gradient(to right, rgb(255, 206, 166), darkorchid) border-box;
+
+  border: 2px solid transparent;
+}
+
+/* Closed state */
+.closed {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: ease .6s;
+}
+
+/* Open state */
+.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: ease .6s;
+}
+.closedright {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.closedbottom {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: ease .6s;
+}
+
+.toggle-button {
+  font-family: 'Orbitron';
+  border: 0px solid transparent;
+}
+
+.planet-info-overlay {
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  max-width: 250px;
+  z-index: 2000; /* Ensure it's above the canvas */
+}
+
+
+.chatbox {
+  position: relative;
+  width: 250px;
+  padding: 20px;
+  color: black;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  text-align: center;
+}
+
+.chatbox::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 20px 10px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
+
+.feed-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.feed-button:hover {
+  background-color: #0056b3;
+}
+
+.pfp {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.particle {
+  position: absolute;
+  font-size: 20px;
+  animation: float 1s ease-out;
+  opacity: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: scale(0) translate(-50px, -200px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.skillcont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillcont p {
+  width: 100px;
+}
+/* Container for all tags */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap; /* Enables wrapping to the next line */
+  gap: 10px; /* Adds space between the tags */
+  padding: 10px;
+}
+
+/* Tag styling */
+.tag {
+  border-radius: 20px;
+  border: 2px solid #333;
+  padding: 5px 15px;
+  background: rgba(0,0,0,.5);
+  color: #ccc;
+  font-weight: 200;
+  font-family: 'Ubuntu';
+  line-height: 12px;
+  font-size: 10px;
+  white-space: nowrap; /* Prevents text from wrapping inside the tag */
+}
+
+.overlay {
+  animation: fadeIn 0.3s ease-in-out;
+}
+.overlay p, .overlay li {
+  font-family: "Ubuntu";
+}
+.overlay a {
+  color:rgb(84, 158, 255);
+  text-decoration: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.outer {
+  margin: 0;
+  padding: 0;
+  overflow: 'hidden'; 
+  height: 100vh;
+  width: 100vw;
+}
+.camcontrol {
+  padding: 18px;
+  display: block;
+}
+.desktophero {
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  .outer {
+    height: auto;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  .sidebar {
+    position: static !important;
+    width: 100% !important;
+  }
+  .aboutcard {
+    position: static !important;
+    width: 100% !important;
+  }
+  .bubbleholder {
+    position: static !important;
+    flex-wrap: wrap;
+    margin: 20px;
+    height: 100% !important;
+  }
+  .bubble {
+    padding: 30px 10px;
+  }
+  .skillcont {
+    display: block;
+    width: 100% !important;
+  }
+  .skillcont p {
+    width: 80%;
+  }
+  .progress-bar {
+    width: 80%;
+  }
+  .tags-container {
+    width: 80%;
+  }
+  .divider {
+    width: 90%;
+  }
+  .camcontrol {
+    display: none;
+  }
+  .planet-info-overlay {
+    left: 0;
+    margin-left: 20px;
+  }
+  .sidebutton {
+    display: none;
+  }
+  .mobilehero {
+    display: block !important;
+    color: white;
+  }
+  .mobilehero a {
+    font-family: "Orbitron";
+  }
+  .mobilehero p {
+    font-weight: 500;
+  }
+  .desktophero {
+    display: none;
+  }
+}
